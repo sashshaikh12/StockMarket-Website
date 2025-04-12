@@ -1,12 +1,12 @@
-// models/stockModel.js
-import mongoose from 'mongoose';
+  // models/stockModel.js
+  import mongoose from 'mongoose';
 
-const stockSchema = new mongoose.Schema({
-  symbol: String,
-  industry: String,
-  stockData: [{}] 
-});
+  const stockSchema = new mongoose.Schema({
+    symbol: String,
+    industry: String,
+    stockData: [{}] 
+  });
 
-const Stock = mongoose.model('Stock', stockSchema);
+  const Stock = mongoose.model('Stock', stockSchema);
 
-export default Stock;
+  export default Stock;
