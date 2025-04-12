@@ -26,3 +26,7 @@
       font-size: var(--text-base);
   }
 }
+
+body{
+  background-color: black
+}
