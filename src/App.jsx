@@ -7,10 +7,7 @@ import Watchlist from "./components/Watchlist.jsx";
 import Compare from "./components/Compare.jsx";
 import Register from "./components/Register.jsx";
 
-
-
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
