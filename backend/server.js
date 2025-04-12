@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import {connectDB} from './config/db.js';
+import stockRoutes from './routes/stockRoutes.js';
 import watchlistRoutes from './routes/watchlist_routes.js';
 
 
@@ -11,6 +12,8 @@ const app = express();
 app.use(express.json());    // Allows to accept JSON data in the body
 app.use(cors({credentials: true, origin: 'http://localhost:5173'}));
 
+// Stock routes
+app.use('/api/stocks', stockRoutes);
 
 app.use('/api/watchlist',watchlistRoutes);
 
