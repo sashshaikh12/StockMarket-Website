@@ -5,16 +5,18 @@ import Home from "./components/Home.jsx";
 import StockDetails from "./components/StockDetails.jsx";
 import Watchlist from "./components/Watchlist.jsx";
 import Compare from "./components/Compare.jsx";
+import Register from "./components/Register.jsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/stock-details" element={<StockDetails />} />
-        <Route path="/watchlist" element={<Watchlist />} />
-        <Route path="/compare" element={<Compare />} />
+        <Route path = "/home" element={<Home />} />
+        <Route path = "/stock-details" element={<StockDetails />} />
+        <Route path = "/watchlist" element={<Watchlist />} />
+        <Route path = "/compare" element={<Compare />} />
+        <Route path = "/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   )
