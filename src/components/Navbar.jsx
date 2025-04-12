@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,37 +10,36 @@ const Navbar = () => {
     // Implement your theme switching logic here
   };
 
-  const navLinks = ["Watchlist", "Compare"];
+
 
   return (
     <nav className="bg-black text-white sticky top-0 z-50 font-[Poppins]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="navbar">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Home */}
           <div className="flex items-center flex-shrink-0">
             <a 
-              href="#home" 
+              href="/home" 
               className="text-3xl font-bold text-purple-400 hover:text-purple-300 transition duration-300"
             >
-              Bester
+              Stockers
             </a>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-4">
-            {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
-                className="px-3 py-2 hover:text-purple-400 transition duration-300 text-lg"
-              >
-                {link}
-              </a>
-            ))}
+
+            <Link to="/watchlist">
+              <p className="px-3 py-2 hover:text-purple-400 transition duration-300 text-lg">Watchlist</p>
+            </Link>
+
+            <Link to="/compare">
+              <p className="px-3 py-2 hover:text-purple-400 transition duration-300 text-lg">Compare</p>
+            </Link>
             
             {/* CTA Button - Added back */}
             <a
-              href="#chatbot"
+              href="/home"
               className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full shadow-md transition duration-300"
             >
               ChatBot
@@ -106,19 +106,20 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} bg-black pb-4`}>
         <div className="px-4 pt-2 space-y-2">
-          {navLinks.map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
-              className="block px-3 py-2 rounded-md text-white hover:text-purple-400 hover:bg-gray-900 transition duration-300"
-              onClick={() => setIsOpen(false)}
-            >
-              {link}
-            </a>
-          ))}
+
+          <Link to="/watchlist">
+            <p className="block px-3 py-2 rounded-md text-white hover:text-purple-400 hover:bg-gray-900 transition duration-300">
+              Watchlist
+            </p>
+          </Link>
+          <Link to="/compare">
+            <p className="block px-3 py-2 rounded-md text-white hover:text-purple-400 hover:bg-gray-900 transition duration-300">
+              Compare
+            </p>
+          </Link>
           
           <a
-            href="#chatbot"
+            href="/home"
             className="block bg-purple-600 hover:bg-purple-700 text-white text-center px-4 py-2 rounded-full transition duration-300 mt-2"
             onClick={() => setIsOpen(false)}
           >

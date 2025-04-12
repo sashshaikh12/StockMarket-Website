@@ -1,8 +1,10 @@
 import React from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/Login.jsx"
-import Navbar from "./components/Navbar.jsx";
 import Home from "./components/Home.jsx";
+import StockDetails from "./components/StockDetails.jsx";
+import Watchlist from "./components/Watchlist.jsx";
+import Compare from "./components/Compare.jsx";
 
 
 
@@ -13,6 +15,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path = "/home" element={<Home />} />
+        <Route path = "/stock-details" element={<StockDetails />} />
+        <Route path = "/watchlist" element={<Watchlist />} />
+        <Route path = "/compare" element={<Compare />} />
       </Routes>
     </BrowserRouter>
   )
