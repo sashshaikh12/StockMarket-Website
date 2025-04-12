@@ -190,7 +190,7 @@ const SearchBar = ({ onCompanySelect }) => {
   };
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto">
+    <div className="relative w-full max-w-2xl mx-auto my-16">
       <div className="relative">
         <input
           ref={inputRef}
