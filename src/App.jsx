@@ -6,18 +6,15 @@ import StockDetails from "./components/StockDetails.jsx";
 import Watchlist from "./components/Watchlist.jsx";
 import Compare from "./components/Compare.jsx";
 
-
-
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path = "/home" element={<Home />} />
-        <Route path = "/stock-details" element={<StockDetails />} />
-        <Route path = "/watchlist" element={<Watchlist />} />
-        <Route path = "/compare" element={<Compare />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/stock-details" element={<StockDetails />} />
+        <Route path="/watchlist" element={<Watchlist />} />
+        <Route path="/compare" element={<Compare />} />
       </Routes>
     </BrowserRouter>
   )
